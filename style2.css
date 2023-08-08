@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box; /* Include padding and border in element's total width/height */
+  
+}
+
+body, html {
+  min-width: 320px; /* Updated minimum width for better responsiveness */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Calibri, sans-serif; /* Include fallback font */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image: url(aboutbackground.jpeg);
+  background-size: cover; /* Adjust background image to cover the entire screen */
+}
+
+.container {
+  display: flex; /* Changed display to flex to make the image and text center horizontally */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;/* Stacked image and text vertically on smaller screens */
+  padding: 20px; /* Add padding for better spacing */
+  text-align: center; /* Center text content */
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+img {
+  max-width: 100%; /* Make the image width responsive */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+
+.image {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px; /* Added max-width to limit image size on larger screens */
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-family: "Castoro Titling", serif;
+  color: #fff;
+  font-size: 23px;
+  padding: 16px 32px;
+}
+
+.about {
+  margin: 10px;
+}
+
+.about p {
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  word-spacing: 10px;
+}
+
+.Signature {
+  display: block;
+  margin: 0 auto;
+  height: 90px;
+  height: auto; /* Adjust height to allow natural scaling */
+  max-width: 100%; /* Ensure the signature image does not overflow its container */
+}
+

@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body,html {
+    min-width:600px;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:Calibri;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(aboutbackground.jpeg);
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+  
+  .img1 {
+    max-width: 100%; /* Make the image width responsive */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  .container{
+    position: relative;
+}
+
+.box ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    align-items: center; /* Center the list items vertically */
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    
+}
+.box ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 40px;
+
+}
+.box ul li a{
+    text-decoration: solid;
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+}
+.box ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+.box ul li:hover:after{
+    width: 100%;
+}
+@media(max-width:700px){
+    .box ul {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+         padding: 10px;
+    }
+    .box ul li {
+        margin: 10px 0;
+    }
+}
+/* Example of media query for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        height: 40vh;
+    }
+
+    .box ul li {
+        margin: 10px 20px;
+    }
+}
+
+.navbar{
+    padding: 2% 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 0;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: solid;
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+.navbar ul li:hover:after{
+    width: 100%;
+}
+
+
+@media(max-width:700px){
+    .navbar ul {
+        display: none; /* Hide the navigation links */
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+    }
+    .navbar ul.show {
+        display: flex; /* Show the navigation links when the menu is toggled */
+    }
+    .navbar ul li{
+        margin: 10px 0;
+        display: block;
+    }
+    .navbar{
+        padding: 2% 4%; /* Adjust padding for smaller screens */
+
+    }
+    .insta-img{
+        height: 10vw;
+    }
+}
+.box-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    
+}
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+  
+  .img2 {
+    max-width: 100%; /* Make the image width responsive */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+
+.column{
+    float: left;
+    width: 100%;
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+  
+.layer {
+    background: transparent;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: #b3b3b39b;
+
+}
+.layer h3{
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    bottom: 0;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 45%;
+    opacity: 1;
+}
+.image-and-text img,
+.image-and-text p {
+    vertical-align: middle;
+    font: 'Poppins', sans-serif;   
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.image-and-text {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Horizontally align items */
+}
+
+.instalogo{
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Horizontally align items */
+   
+}
+.insta-img{
+    height: 20vh;
+}
+.cta{
+    margin: 50px auto;
+    width: 90%;
+    background-image: linear-gradient(rgba(99, 96, 96, 0.7),rgba(84, 82, 82, 0.7)),url(bake.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px 0;
+}
+.cta h1{
+    color: #fbd9d9;
+    text-decoration-style: solid;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.button{
+    background-color: #eacbc0;
+    border: none;
+    color: white;
+    text-decoration-style: solid;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.button:hover {
+    background-color:#f2ded7;
+    transition: 0.7s;
+}

@@ -1,0 +1,13 @@
+.body {
+    animation: transitions 1s ;
+}
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 2;
+        transform: translateY(0);
+    }
+}

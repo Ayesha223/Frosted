@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body,html {
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:Calibri;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(aboutbackground.jpeg);
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+  }
+  
+  .logo {
+    max-width: 100%; /* Make the image width responsive */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  
+.container{
+    position: relative;
+}
+
+.box ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the list items horizontally */
+    align-items: center; /* Center the list items vertically */
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    
+}
+.box ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 40px;
+
+}
+.box ul li a{
+    text-decoration: solid;
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+}
+.box ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+.box ul li:hover:after{
+    width: 100%;
+}
+@media(max-width:700px){
+    .box ul {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+         padding: 10px;
+    }
+    .box ul li {
+        margin: 10px 0;
+    }
+}
+/* Example of media query for smaller screens */
+@media (max-width: 768px) {
+    .box {
+        height: 40vh;
+    }
+
+    .box ul li {
+        margin: 10px 20px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .image-and-text img,
+    .image-and-text p,
+    .box1 p {
+        font-size: 5vh;
+    }
+    .box1{
+        width: auto;
+    }
+}
+
+
+.box1 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 100vh;
+    flex-direction: column; /* Stack the contents vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: justify;
+}
+
+.heading {
+    font: 'Poppins', sans-serif;   
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    
+}
+.image-and-text img,
+.image-and-text p {
+    display: inline-block;
+    vertical-align: middle;
+    font: 'Poppins', sans-serif;   
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+
+.box1 p {
+    font: 'Poppins', sans-serif;   
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px; 
+}
+
+.box1 button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #24838d;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.box1 button:hover {
+    background-color: #87c5d1;
+}
+
+

@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body,html {
+    min-width:32px;
+    height:100%;
+    margin:0;
+    padding:0;
+    font-family:Calibri;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(aboutbackground.jpeg);
+    background-size: cover;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+img {
+  max-width: 100%; /* Make the image width responsive */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.container{
+   position: relative;
+}
+.box ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the list items horizontally */
+  align-items: center; /* Center the list items vertically */
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  
+}
+.box ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 40px;
+
+}
+.box ul li a{
+  text-decoration: solid;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+.box ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.7s;
+}
+.box ul li:hover:after{
+  width: 100%;
+}
+
+
+
+
+@media(max-width:700px){
+  .box ul {
+      position: static;
+      flex-direction: column;
+      text-align: center;
+       padding: 10px;
+  }
+  .box ul li {
+      margin: 10px 0;
+  }
+}
+  @media only screen and (max-width: 768px) {
+    .box-container {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+    .box1{
+        width: 60vw; /* Adjusted width for smaller screens */
+        margin-left: 6vw; /* Center the boxes horizontally */
+    }
+}
+@media only screen and (max-width: 480px) {
+
+  .flavour,
+  .flavour1,
+  .flavour2,
+  .flavour3 {
+      font-size: 4vw; /* Adjusted font size for smaller screens */
+  }
+}
+.box-container {
+  justify-content: space-between;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.box1 {
+  width: calc(50% - 20px); /* Adjust width as needed */
+  margin-bottom: 20px; /* Add spacing between boxes */
+  /* Other styling for boxes */
+}
+.box1 {
+    display: block;
+    width: 75vh;
+    height: auto; /* Allow content to dictate height */
+    border: 1px solid black;
+    margin: 20px auto; /* Center horizontally and add spacing */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.heading{
+  font-family: "castoro titling";
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  line-height: 1.2; /* Adjust line height for better readability */
+  font-size: 2.5vw; /* Responsive font size */
+  color:#221b1b;
+  text-align:center;
+  margin-top: 15px;
+  font-weight: bold; /* Add spacing */
+}
+.flavour,
+.flavour1,
+.flavour2,
+.flavour3 {
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 2vw; /* Responsive font size */
+    word-spacing: 10px;
+    line-height: 1.5;
+    margin: 10px 0; /* Add vertical spacing */
+}
+
+  
+  

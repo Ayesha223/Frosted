@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Frosted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylr5.css">
+    <body>
+        <div class="container">
+        <div class="box">
+            <div class="image-container">
+            <img src="letsTalk1.png" class="logo">
+            </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Reviews.html">Reviews</a></li>
+                    <li><a href="Contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        <br><br>
+        <div class="box1">
+                    <div class="heading">Contact Us</div><br>
+                    <div class="image-and-text">
+                        <img src="Phone .jpg" alt="Image" height="20px">
+                        <p>8197305873</p>
+                    </div>
+                    <div class="image-and-text">
+                        <img src="Gmail.jpg" alt="Image" height="20px">
+                    <p>ayeshifana02@gmail.com</p>
+                    </div>
+                    <div class="image-and-text">
+                        <img src="Map.jpg" alt="Image" height="20px">
+                    <p>Kempapura, Hebbal, Bangalore-560024</p>
+                    </div>
+                </div>
+                <br>
+        <div class="box1">
+            <div class="heading">Pitch Us</div><br>
+            <div class="image-and-text">
+                <img src="WhatsApp.jpg" alt="Image" height="20px">
+                    <p>Connect us through whatsapp</p>
+            </div>
+                    <button id="whatsappButton">Click to Chat</button>
+        </div>
+        </div>
+
+<script>
+    document.getElementById("whatsappButton").addEventListener("click", function() {
+        var phoneNumber = "+918197305873";  // Remove any special characters from the phone number
+        var message = "Hello, I'm contacting you from the website."; // You can customize the initial message
+        
+        var encodedMessage = encodeURIComponent(message);
+        var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodedMessage;
+        
+        window.open(whatsappURL, '_blank');
+    });
+</script>
+</body>
+</html>

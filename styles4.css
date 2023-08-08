@@ -1,0 +1,125 @@
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    min-width: 320px; /* Updated minimum width for better responsiveness */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif; /* Include fallback font */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(aboutbackground.jpeg);
+    background-size: cover; /* Adjust background image to cover the entire screen */
+  }
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+.container1{
+    position: relative;
+}
+.box ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the list items horizontally */
+  align-items: center; /* Center the list items vertically */
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  
+}
+.box ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 40px;
+
+}
+.box ul li a{
+  text-decoration: solid;
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+}
+.box ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.7s;
+}
+.box ul li:hover:after{
+  width: 100%;
+}
+
+
+
+
+@media(max-width:700px){
+  .box ul {
+      position: static;
+      flex-direction: column;
+      text-align: center;
+       padding: 10px;
+  }
+  .box ul li {
+      margin: 10px 0;
+  }
+}
+
+.founder {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about {
+    padding: 10px;
+    text-align: justify;
+}
+
+.Sign {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Add responsive styles */
+@media only screen and (max-width: 768px) {
+    .box-container {
+        height: auto;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .founder {
+        margin-top: 10px;
+    }
+    
+    .about {
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .about {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
